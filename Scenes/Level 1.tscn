@@ -16,6 +16,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.545, 0)
 light_energy = 5.202
 omni_range = 60.0
 
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5842, 41.0517)
+light_energy = 5.202
+omni_range = 60.0
+
 [node name="Finish" parent="." instance=ExtResource("3_yhmn5")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -5.03069, 53.0696)
 
