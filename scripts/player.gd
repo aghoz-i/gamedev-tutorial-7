@@ -37,7 +37,12 @@ func _physics_process(delta):
 	if Input.is_action_pressed("movement_right"):
 		movement_vector += head.basis.x
 
+	
 	movement_vector = movement_vector.normalized()
+	if Input.is_action_pressed("crouch"):
+		movement_vector *= 0.7
+	elif Input.is_action_pressed("sprint"):
+		movement_vector *= 1.5
 
 	velocity.x = lerp(velocity.x, movement_vector.x * speed, acceleration * delta)
 	velocity.z = lerp(velocity.z, movement_vector.z * speed, acceleration * delta)
